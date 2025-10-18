@@ -6,14 +6,6 @@ import { useState, useEffect } from 'react';
 // Import talks array from SpeakingSection
 const talks = [
   {
-    title: 'What if GraphQL Knew Accessibility',
-    conference: 'GraphQLConf 2025',
-    location: 'Amsterdam, The Netherlands',
-    date: 'September 8-10, 2025',
-    status: 'upcoming',
-    description: 'Exploring how GraphQL can be leveraged to build more accessible applications and improve user experience.'
-  },
-  {
     title: 'Building Inclusive Jetpack Compose Apps: Leveraging Kotlin and the Accessibility Scanner',
     conference: 'TechBash 2025',
     location: 'Poconos, Pennsylvania',
@@ -22,20 +14,21 @@ const talks = [
     description: 'Sharing insights on building accessible Android applications using Jetpack Compose and the Accessibility Scanner.'
   },
   {
-    title: 'Jetpack Compose Performance: Debugging and Fixing Common Pitfalls',
-    conference: 'TechBash 2025',
-    location: 'Poconos, Pennsylvania',
-    date: 'November 5-7, 2025',
-    status: 'upcoming',
-    description: 'Deep dive into performance optimization techniques for Jetpack Compose applications and common debugging strategies.'
-  },
-  {
     title: 'Building Inclusive Jetpack Compose Apps: Leveraging Kotlin and the Accessibility Scanner',
     conference: 'Droidcon Italy 2025',
     location: 'Turin, Italy',
     date: 'November 19-20, 2025',
     status: 'upcoming',
     description: 'Sharing insights on building accessible Android applications using Jetpack Compose and leveraging the Accessibility Scanner for better user experience.'
+  },
+  {
+    title: 'What if GraphQL Knew Accessibility',
+    conference: 'GraphQLConf 2025',
+    location: 'Amsterdam, The Netherlands',
+    date: 'September 8-10, 2025',
+    status: 'completed',
+    link: 'https://www.youtube.com/watch?v=ttmp_zkHH_0',
+    description: 'Exploring how GraphQL can be leveraged to build more accessible applications and improve user experience.'
   },
   {
     title: 'Building Inclusive Jetpack Compose Apps: Leveraging Kotlin and the Accessibility Scanner',
@@ -95,10 +88,10 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-600 via-pink-500 to-orange-400 overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-cyan-600 via-blue-600 to-indigo-700 overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-20">
-        <div className="absolute inset-0 bg-gradient-to-br from-yellow-400 to-pink-500 animate-pulse"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-teal-400 to-blue-600 animate-pulse"></div>
       </div>
       
       <div className="container mx-auto px-2 sm:px-4 py-10 sm:py-20 relative z-10">
@@ -106,11 +99,11 @@ export default function HeroSection() {
           {/* Android Device Frame */}
           <div className="relative">
             {/* Phone Frame */}
-            <div className="relative w-full max-w-[400px] h-[80vh] max-h-[700px] bg-gradient-to-br from-gray-900 to-gray-800 rounded-[3rem] p-2 shadow-2xl border-4 border-purple-500/30">
+            <div className="relative w-full max-w-[400px] h-[80vh] max-h-[700px] bg-gradient-to-br from-gray-900 to-gray-800 rounded-[3rem] p-2 shadow-2xl border-4 border-cyan-500/30">
               {/* Screen */}
-              <div className="w-full h-full bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 rounded-[2.5rem] overflow-hidden relative">
+              <div className="w-full h-full bg-gradient-to-br from-cyan-50 via-blue-50 to-indigo-50 rounded-[2.5rem] overflow-hidden relative">
                 {/* Status Bar */}
-                <div className="absolute top-0 left-0 right-0 h-8 bg-gradient-to-r from-purple-600 to-pink-600 text-white flex items-center justify-between px-6 text-xs font-medium z-20">
+                <div className="absolute top-0 left-0 right-0 h-8 bg-gradient-to-r from-cyan-600 to-indigo-600 text-white flex items-center justify-between px-6 text-xs font-medium z-20">
                   <div className="flex items-center gap-1">
                     <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
                     <div className="w-2 h-2 bg-yellow-400 rounded-full animate-pulse"></div>
@@ -124,14 +117,14 @@ export default function HeroSection() {
                 </div>
 
                 {/* App Content */}
-                <div className="pt-8 h-full bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50">
+                <div className="pt-8 h-full bg-gradient-to-br from-cyan-50 via-blue-50 to-indigo-50">
                   {/* Navigation Bar */}
-                  <div className="flex items-center justify-between px-6 py-4 bg-white/90 backdrop-blur-sm border-b border-purple-100">
-                    <div className="w-8 h-8 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center">
+                  <div className="flex items-center justify-between px-6 py-4 bg-white/90 backdrop-blur-sm border-b border-cyan-100">
+                    <div className="w-8 h-8 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full flex items-center justify-center">
                       <span className="text-white font-bold text-sm">V</span>
                     </div>
                     <h1 className="text-lg font-bold text-gray-900">Portfolio</h1>
-                    <div className="w-8 h-8 bg-gradient-to-br from-orange-400 to-pink-400 rounded-full flex items-center justify-center">
+                    <div className="w-8 h-8 bg-gradient-to-br from-teal-500 to-cyan-500 rounded-full flex items-center justify-center">
                       <span className="text-white text-xs">•••</span>
                     </div>
                   </div>
@@ -140,14 +133,14 @@ export default function HeroSection() {
                   <div className="h-full overflow-y-auto pb-24">
                     <div className="px-6 py-8 space-y-6">
                       {/* Profile Card */}
-                      <div className="bg-gradient-to-br from-white to-purple-50 rounded-2xl p-6 shadow-lg border border-purple-100">
+                      <div className="bg-gradient-to-br from-white to-cyan-50 rounded-2xl p-6 shadow-lg border border-cyan-100">
                         <div className="flex items-center gap-4 mb-4">
-                          <div className="w-16 h-16 bg-gradient-to-br from-purple-500 via-pink-500 to-orange-500 rounded-full flex items-center justify-center">
+                          <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 via-blue-600 to-indigo-600 rounded-full flex items-center justify-center">
                             <span className="text-white font-bold text-xl">VJ</span>
                           </div>
                           <div>
                             <h2 className="text-xl font-bold text-gray-900">Vanessa Johnson</h2>
-                            <p className="text-purple-600 font-medium">Android Engineer</p>
+                            <p className="text-cyan-700 font-medium">Android Engineer</p>
                           </div>
                         </div>
                         <p className="text-gray-600 text-sm leading-relaxed">
@@ -160,7 +153,7 @@ export default function HeroSection() {
                       <div className="grid grid-cols-2 gap-4">
                         <a
                           href="#contact"
-                          className="bg-gradient-to-r from-purple-500 to-pink-500 text-white p-4 rounded-xl flex items-center justify-center gap-2 font-medium hover:from-purple-600 hover:to-pink-600 transition-all cursor-pointer shadow-lg"
+                          className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white p-4 rounded-xl flex items-center justify-center gap-2 font-medium hover:from-cyan-700 hover:to-blue-700 transition-all cursor-pointer shadow-lg"
                         >
                           <Mail className="w-4 h-4" />
                           Contact
@@ -169,7 +162,7 @@ export default function HeroSection() {
                           href="https://github.com/vanessamj99"
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="bg-gradient-to-r from-orange-400 to-pink-400 text-white p-4 rounded-xl flex items-center justify-center gap-2 font-medium hover:from-orange-500 hover:to-pink-500 transition-all cursor-pointer shadow-lg"
+                          className="bg-gradient-to-r from-teal-500 to-cyan-600 text-white p-4 rounded-xl flex items-center justify-center gap-2 font-medium hover:from-teal-600 hover:to-cyan-700 transition-all cursor-pointer shadow-lg"
                         >
                           <Github className="w-4 h-4" />
                           GitHub
@@ -178,22 +171,22 @@ export default function HeroSection() {
 
                       {/* Stats Cards */}
                       <div className="grid grid-cols-3 gap-3">
-                        <div className="bg-gradient-to-br from-purple-100 to-pink-100 rounded-xl p-3 text-center shadow-sm border border-purple-200">
-                          <div className="text-lg font-bold text-purple-800">1+</div>
+                        <div className="bg-gradient-to-br from-cyan-100 to-blue-100 rounded-xl p-3 text-center shadow-sm border border-cyan-200">
+                          <div className="text-lg font-bold text-cyan-800">1+</div>
                           <div className="text-xs text-gray-700">Years Exp</div>
                         </div>
-                        <div className="bg-gradient-to-br from-pink-100 to-orange-100 rounded-xl p-3 text-center shadow-sm border border-pink-200">
-                          <div className="text-lg font-bold text-pink-800">{talks.length}</div>
+                        <div className="bg-gradient-to-br from-blue-100 to-indigo-100 rounded-xl p-3 text-center shadow-sm border border-blue-200">
+                          <div className="text-lg font-bold text-blue-800">{talks.length}</div>
                           <div className="text-xs text-gray-700">Talks</div>
                         </div>
-                        <div className="bg-gradient-to-br from-orange-100 to-yellow-100 rounded-xl p-3 text-center shadow-sm border border-orange-200">
-                          <div className="text-lg font-bold text-orange-800">3</div>
+                        <div className="bg-gradient-to-br from-teal-100 to-cyan-100 rounded-xl p-3 text-center shadow-sm border border-teal-200">
+                          <div className="text-lg font-bold text-teal-800">3</div>
                           <div className="text-xs text-gray-700">Projects</div>
                         </div>
                       </div>
 
                       {/* Featured Project */}
-                      <div className="bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl p-6 text-white shadow-lg">
+                      <div className="bg-gradient-to-br from-cyan-600 to-indigo-600 rounded-2xl p-6 text-white shadow-lg">
                         <div className="flex items-center gap-3 mb-4">
                           <Star className="w-5 h-5 text-yellow-300" />
                           <span className="text-yellow-300 font-medium">Featured Project</span>
@@ -215,7 +208,7 @@ export default function HeroSection() {
                           href="https://community.gradle.org/events/gsoc/2025/kotlin-code-quality-with-problems-api/"
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-2 bg-white text-purple-600 px-4 py-2 rounded-xl font-medium transition-colors"
+                          className="inline-flex items-center gap-2 bg-white text-cyan-700 px-4 py-2 rounded-xl font-medium transition-colors"
                         >
                           View Project
                         </a>
@@ -227,15 +220,15 @@ export default function HeroSection() {
                         <div className="space-y-2">
                           <div className="flex items-center gap-3 text-sm">
                             <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                            <span className="text-gray-600">Spoke at GraphQLConf 2025</span>
+                          </div>
+                          <div className="flex items-center gap-3 text-sm">
+                            <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
                             <span className="text-gray-600">Spoke at KotlinConf 2025</span>
                           </div>
                           <div className="flex items-center gap-3 text-sm">
                             <div className="w-2 h-2 bg-purple-500 rounded-full animate-pulse"></div>
                             <span className="text-gray-600">Google Summer of Code 2025</span>
-                          </div>
-                          <div className="flex items-center gap-3 text-sm">
-                            <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></div>
-                            <span className="text-gray-600">Joined The New York Times</span>
                           </div>
                         </div>
                       </div>
@@ -249,26 +242,26 @@ export default function HeroSection() {
                       </div>
 
                       {/* Skills Section */}
-                      <div className="bg-gradient-to-br from-white to-orange-50 rounded-2xl p-4 shadow-sm border border-orange-100">
+                      <div className="bg-gradient-to-br from-white to-teal-50 rounded-2xl p-4 shadow-sm border border-teal-100">
                         <h3 className="font-semibold text-gray-900 mb-3">Skills</h3>
                         <div className="flex flex-wrap gap-2">
-                          <span className="px-3 py-1 bg-gradient-to-r from-purple-100 to-pink-100 text-purple-700 rounded-full text-xs border border-purple-200">Kotlin</span>
-                          <span className="px-3 py-1 bg-gradient-to-r from-pink-100 to-orange-100 text-pink-700 rounded-full text-xs border border-pink-200">Android SDK</span>
-                          <span className="px-3 py-1 bg-gradient-to-r from-orange-100 to-yellow-100 text-orange-700 rounded-full text-xs border border-orange-200">Jetpack Compose</span>
-                          <span className="px-3 py-1 bg-gradient-to-r from-yellow-100 to-green-100 text-yellow-700 rounded-full text-xs border border-yellow-200">MVVM</span>
-                          <span className="px-3 py-1 bg-gradient-to-r from-green-100 to-blue-100 text-green-700 rounded-full text-xs border border-green-200">Firebase</span>
-                          <span className="px-3 py-1 bg-gradient-to-r from-blue-100 to-purple-100 text-blue-700 rounded-full text-xs border border-blue-200">Git</span>
-                          <span className="px-3 py-1 bg-gradient-to-r from-blue-100 to-green-100 text-blue-700 rounded-full text-xs border border-blue-200">GraphQL</span>
-                          <span className="px-3 py-1 bg-gradient-to-r from-green-100 to-blue-100 text-green-700 rounded-full text-xs border border-green-200">Room</span>
-                          <span className="px-3 py-1 bg-gradient-to-r from-blue-100 to-purple-100 text-blue-700 rounded-full text-xs border border-blue-200">Retrofit</span>
-                          <span className="px-3 py-1 bg-gradient-to-r from-purple-100 to-pink-100 text-purple-700 rounded-full text-xs border border-purple-200">SwiftUI</span>
+                          <span className="px-3 py-1 bg-gradient-to-r from-cyan-100 to-blue-100 text-cyan-700 rounded-full text-xs border border-cyan-200">Kotlin</span>
+                          <span className="px-3 py-1 bg-gradient-to-r from-blue-100 to-indigo-100 text-blue-700 rounded-full text-xs border border-blue-200">Android SDK</span>
+                          <span className="px-3 py-1 bg-gradient-to-r from-indigo-100 to-cyan-100 text-indigo-700 rounded-full text-xs border border-indigo-200">Jetpack Compose</span>
+                          <span className="px-3 py-1 bg-gradient-to-r from-teal-100 to-cyan-100 text-teal-700 rounded-full text-xs border border-teal-200">MVVM</span>
+                          <span className="px-3 py-1 bg-gradient-to-r from-cyan-100 to-blue-100 text-cyan-700 rounded-full text-xs border border-cyan-200">Firebase</span>
+                          <span className="px-3 py-1 bg-gradient-to-r from-blue-100 to-indigo-100 text-blue-700 rounded-full text-xs border border-blue-200">Git</span>
+                          <span className="px-3 py-1 bg-gradient-to-r from-indigo-100 to-teal-100 text-indigo-700 rounded-full text-xs border border-indigo-200">GraphQL</span>
+                          <span className="px-3 py-1 bg-gradient-to-r from-cyan-100 to-blue-100 text-cyan-700 rounded-full text-xs border border-cyan-200">Room</span>
+                          <span className="px-3 py-1 bg-gradient-to-r from-blue-100 to-cyan-100 text-blue-700 rounded-full text-xs border border-blue-200">Retrofit</span>
+                          <span className="px-3 py-1 bg-gradient-to-r from-teal-100 to-cyan-100 text-teal-700 rounded-full text-xs border border-teal-200">SwiftUI</span>
                         </div>
                       </div>
 
                       {/* Newsletter Section */}
-                      <div className="bg-gradient-to-br from-white to-purple-50 rounded-2xl p-4 shadow-sm border border-purple-100">
+                      <div className="bg-gradient-to-br from-white to-cyan-50 rounded-2xl p-4 shadow-sm border border-cyan-100">
                         <div className="flex items-center gap-3 mb-3">
-                          <MessageSquare className="w-5 h-5 text-purple-600" />
+                          <MessageSquare className="w-5 h-5 text-cyan-700" />
                           <h3 className="font-semibold text-gray-900">Vanessa On Mobile</h3>
                         </div>
                         <p className="text-gray-600 text-sm mb-4">
@@ -290,7 +283,7 @@ export default function HeroSection() {
                           href="https://vanessaonmobile.substack.com"
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-2 text-purple-600 hover:text-purple-700 font-medium text-sm transition-colors"
+                          className="inline-flex items-center gap-2 text-cyan-700 hover:text-cyan-800 font-medium text-sm transition-colors"
                         >
                           Subscribe to Newsletter
                         </a>
@@ -305,7 +298,6 @@ export default function HeroSection() {
                           <div>• Conference Speaking</div>
                           <div>• Accessibility in Tech</div>
                           <div>• Newsletter Publishing</div>
-                          <div>• Podcast Creation</div>
                         </div>
                       </div>
 
@@ -317,24 +309,23 @@ export default function HeroSection() {
                             <div className="font-medium text-sm text-gray-900">From Scratch Labs</div>
                             <div className="text-xs text-gray-600">An upcoming educational platform</div>
                           </div>
-                          <div className="p-3 bg-gradient-to-r from-purple-50 to-pink-50 rounded-lg border border-purple-200">
+                          <div className="p-3 bg-gradient-to-r from-teal-50 to-cyan-50 rounded-lg border border-teal-200">
                             <div className="font-medium text-sm text-gray-900">GutFeeling</div>
                             <div className="text-xs text-gray-600">Health tracking app with AI insights</div>
                           </div>
-                          <div className="p-3 bg-gradient-to-r from-pink-50 to-orange-50 rounded-lg border border-pink-200">
+                          <div className="p-3 bg-gradient-to-r from-indigo-50 to-blue-50 rounded-lg border border-indigo-200">
                             <div className="font-medium text-sm text-gray-900">Gemini Collaboration IDE</div>
                             <div className="text-xs text-gray-600">Real-time collaborative coding platform</div>
                           </div>
                         </div>
                       </div>
 
-                      <div className="bg-gradient-to-br from-white to-purple-50 rounded-2xl p-4 shadow-sm border border-purple-100">
+                      <div className="bg-gradient-to-br from-white to-indigo-50 rounded-2xl p-4 shadow-sm border border-indigo-100">
                         <h3 className="font-semibold text-gray-900 mb-3">Speaking Highlights</h3>
                         <div className="space-y-2 text-sm text-gray-600">
-                          <div>• GraphQLConf 2025 - What if GraphQL Knew Accessibility</div>
                           <div>• TechBash 2025 - Building Inclusive Jetpack Compose Apps</div>
-                          <div>• TechBash 2025 - Jetpack Compose Performance</div>
                           <div>• Droidcon Italy 2025 - Building Inclusive Jetpack Compose Apps</div>
+                          <div>• GraphQLConf 2025 - What if GraphQL Knew Accessibility ✓</div>
                           <div>• KotlinConf 2025 - Building Inclusive Jetpack Compose Apps ✓</div>
                         </div>
                       </div>
@@ -358,11 +349,11 @@ export default function HeroSection() {
                   </div>
 
                   {/* Bottom Navigation */}
-                  <div className="absolute bottom-0 left-0 right-0 bg-white/95 backdrop-blur-sm border-t border-purple-200">
+                  <div className="absolute bottom-0 left-0 right-0 bg-white/95 backdrop-blur-sm border-t border-cyan-200">
                     <div className="flex justify-around py-3">
                       <a href="#home" className="flex flex-col items-center">
-                        <div className="w-6 h-6 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full mb-1"></div>
-                        <span className="text-xs text-purple-600 font-medium">Home</span>
+                        <div className="w-6 h-6 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full mb-1"></div>
+                        <span className="text-xs text-cyan-700 font-medium">Home</span>
                       </a>
                       <a href="#experience" className="flex flex-col items-center">
                         <div className="w-6 h-6 bg-gray-300 rounded-full mb-1"></div>
@@ -381,14 +372,14 @@ export default function HeroSection() {
                 </div>
 
                 {/* Home Button */}
-                <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 w-12 h-1 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full"></div>
+                <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 w-12 h-1 bg-gradient-to-r from-cyan-400 to-indigo-400 rounded-full"></div>
               </div>
             </div>
 
             {/* Floating Action Button */}
             <a
               href="#experience"
-              className="absolute -bottom-4 -right-4 w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center shadow-lg hover:from-purple-600 hover:to-pink-600 transition-all cursor-pointer"
+              className="absolute -bottom-4 -right-4 w-12 h-12 bg-gradient-to-br from-cyan-600 to-indigo-600 rounded-full flex items-center justify-center shadow-lg hover:from-cyan-700 hover:to-indigo-700 transition-all cursor-pointer"
             >
               <ArrowRight className="w-6 h-6 text-white" />
             </a>

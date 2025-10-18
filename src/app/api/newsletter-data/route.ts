@@ -1,10 +1,42 @@
 import { NextResponse } from 'next/server';
 
+// ============================================
+// CONFIGURATION - Update these values as needed
+// ============================================
+// Note: Substack RSS feeds don't include subscriber counts,
+// so update this manually when your subscriber count changes
+const SUBSCRIBER_COUNT = 28; // Update this with your current subscriber count
+
+// Cache configuration
+const CACHE_DURATION = 7 * 24 * 60 * 60 * 1000; // 1 week in milliseconds
+
+// In-memory cache (for serverless functions, consider using Vercel KV or similar)
+let cachedData: any = null;
+let lastFetchTime: number = 0;
+
 export async function GET() {
   try {
+    // Check if cache is valid (less than 1 week old)
+    const now = Date.now();
+    const cacheAge = now - lastFetchTime;
+    
+    if (cachedData && cacheAge < CACHE_DURATION) {
+      console.log('Returning cached newsletter data');
+      return NextResponse.json({
+        ...cachedData,
+        cached: true,
+        cacheAge: Math.floor(cacheAge / 1000 / 60 / 60), // hours
+        nextRefresh: Math.floor((CACHE_DURATION - cacheAge) / 1000 / 60 / 60) // hours until next refresh
+      });
+    }
+
+    console.log('Fetching fresh newsletter data');
+    
     // Fetch RSS feed from Substack
     const rssUrl = 'https://vanessaonmobile.substack.com/feed';
-    const response = await fetch(rssUrl);
+    const response = await fetch(rssUrl, {
+      next: { revalidate: 604800 } // 1 week in seconds
+    });
     
     if (!response.ok) {
       throw new Error('Failed to fetch RSS feed');
@@ -16,23 +48,40 @@ export async function GET() {
     const articles = parseRSSFeed(xmlText);
     const channelDescription = parseChannelDescription(xmlText);
     
-    // Get exact subscriber count and article count from RSS feed
-    const subscriberCount = parseSubscriberCount(xmlText);
+    // Get article count from RSS feed (subscriber count is set in config)
     const totalArticleCount = parseTotalArticleCount(xmlText);
     
-    return NextResponse.json({
-      subscribers: subscriberCount,
+    // Update cache
+    cachedData = {
+      subscribers: SUBSCRIBER_COUNT,
       articles: articles.slice(0, 10), // Get latest 10 articles for display
       totalArticles: totalArticleCount, // Total count of all articles
       description: channelDescription || "Vanessa On Mobile: Your weekly source for actionable insights, expert tips, and career strategies for Android engineers. Also, I'm building a side project that's in iOS for gut health. Come along for the ride!"
+    };
+    lastFetchTime = now;
+    
+    return NextResponse.json({
+      ...cachedData,
+      cached: false,
+      lastUpdated: new Date(now).toISOString()
     });
     
   } catch (error) {
     console.error('Error fetching newsletter data:', error);
     
+    // If we have cached data, return it even if expired
+    if (cachedData) {
+      console.log('Returning expired cache due to fetch error');
+      return NextResponse.json({
+        ...cachedData,
+        cached: true,
+        expired: true
+      });
+    }
+    
     // Return fallback data with exact numbers
     return NextResponse.json({
-      subscribers: 25, // Exact subscriber count
+      subscribers: SUBSCRIBER_COUNT,
       totalArticles: 0, // Will be calculated from RSS feed
       articles: [
         {
@@ -61,7 +110,8 @@ export async function GET() {
           date: "2025-04-22"
         }
       ],
-      description: "Vanessa On Mobile: Your weekly source for actionable insights, expert tips, and career strategies for Android engineers. Also, I'm building a side project that's in iOS for gut health. Come along for the ride!"
+      description: "Vanessa On Mobile: Your weekly source for actionable insights, expert tips, and career strategies for Android engineers. Also, I'm building a side project that's in iOS for gut health. Come along for the ride!",
+      fallback: true
     });
   }
 }
@@ -99,34 +149,8 @@ function parseRSSFeed(xmlText: string) {
   return articles;
 }
 
-function parseSubscriberCount(xmlText: string): number {
-  // Try to extract subscriber count from RSS feed metadata
-  // This is a fallback since Substack RSS doesn't always include subscriber count
-  // You might need to use Substack's API for exact numbers
-  try {
-    // Look for subscriber count in various possible locations
-    const patterns = [
-      /<subscribers>(\d+)<\/subscribers>/,
-      /<subscriberCount>(\d+)<\/subscriberCount>/,
-      /"subscriberCount":\s*(\d+)/,
-      /subscribers["\s]*:[\s]*(\d+)/
-    ];
-    
-    for (const pattern of patterns) {
-      const match = xmlText.match(pattern);
-      if (match && match[1]) {
-        return parseInt(match[1], 10);
-      }
-    }
-    
-    // If no subscriber count found, return a reasonable estimate
-    // You can update this number manually or implement Substack API integration
-    return 25; // Current estimated subscriber count
-  } catch (error) {
-    console.error('Error parsing subscriber count:', error);
-    return 25; // Fallback
-  }
-}
+// Note: parseSubscriberCount function removed as Substack RSS doesn't include subscriber data
+// Subscriber count is now configured at the top of the file as SUBSCRIBER_COUNT
 
 function parseTotalArticleCount(xmlText: string): number {
   // Count the actual number of <item> tags in the RSS feed

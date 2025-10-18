@@ -14,14 +14,6 @@ interface Talk {
 
 const talks: Talk[] = [
   {
-    title: 'What if GraphQL Knew Accessibility',
-    conference: 'GraphQLConf 2025',
-    location: 'Amsterdam, The Netherlands',
-    date: 'September 8-10, 2025',
-    status: 'upcoming',
-    description: 'Exploring how GraphQL can be leveraged to build more accessible applications and improve user experience.'
-  },
-  {
     title: 'Building Inclusive Jetpack Compose Apps: Leveraging Kotlin and the Accessibility Scanner',
     conference: 'TechBash 2025',
     location: 'Poconos, Pennsylvania',
@@ -30,20 +22,21 @@ const talks: Talk[] = [
     description: 'Sharing insights on building accessible Android applications using Jetpack Compose and the Accessibility Scanner.'
   },
   {
-    title: 'Jetpack Compose Performance: Debugging and Fixing Common Pitfalls',
-    conference: 'TechBash 2025',
-    location: 'Poconos, Pennsylvania',
-    date: 'November 5-7, 2025',
-    status: 'upcoming',
-    description: 'Deep dive into performance optimization techniques for Jetpack Compose applications and common debugging strategies.'
-  },
-  {
     title: 'Building Inclusive Jetpack Compose Apps: Leveraging Kotlin and the Accessibility Scanner',
     conference: 'Droidcon Italy 2025',
     location: 'Turin, Italy',
     date: 'November 19-20, 2025',
     status: 'upcoming',
     description: 'Sharing insights on building accessible Android applications using Jetpack Compose and leveraging the Accessibility Scanner for better user experience.'
+  },
+  {
+    title: 'What if GraphQL Knew Accessibility',
+    conference: 'GraphQLConf 2025',
+    location: 'Amsterdam, The Netherlands',
+    date: 'September 8-10, 2025',
+    status: 'completed',
+    link: 'https://www.youtube.com/watch?v=ttmp_zkHH_0',
+    description: 'Exploring how GraphQL can be leveraged to build more accessible applications and improve user experience.'
   },
   {
     title: 'Building Inclusive Jetpack Compose Apps: Leveraging Kotlin and the Accessibility Scanner',
@@ -61,7 +54,7 @@ export default function SpeakingSection() {
     <section id="speaking" className="py-12 bg-white">
       <div className="container mx-auto px-4">
         {/* App Header */}
-        <div className="bg-gradient-to-r from-blue-500 to-green-500 rounded-2xl p-6 mb-6 text-white">
+        <div className="bg-gradient-to-r from-cyan-600 to-indigo-600 rounded-2xl p-6 mb-6 text-white">
           <div className="flex items-center justify-between">
             <div>
               <h2 className="text-2xl font-bold mb-1">
@@ -88,7 +81,7 @@ export default function SpeakingSection() {
               <div className="flex items-start justify-between mb-4">
                 <div className="flex-1">
                   <div className="flex items-center gap-3 mb-2">
-                    <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center">
+                    <div className="w-10 h-10 bg-gradient-to-br from-cyan-600 to-indigo-600 rounded-xl flex items-center justify-center">
                       <Mic className="w-5 h-5 text-white" />
                     </div>
                     <div>

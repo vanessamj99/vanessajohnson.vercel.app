@@ -65,7 +65,7 @@ export default function ProjectsSection() {
         {/* Featured Project */}
         {projects.filter(p => p.featured).map((project, index) => (
           <div key={index} className="mb-6">
-            <div className="bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl p-6 text-white">
+            <div className="bg-gradient-to-r from-cyan-600 to-indigo-600 rounded-2xl p-6 text-white">
               <div className="flex items-center gap-3 mb-4">
                 <Star className="w-5 h-5 text-yellow-300" />
                 <span className="text-yellow-300 font-medium">Featured Project</span>
@@ -96,7 +96,7 @@ export default function ProjectsSection() {
                     href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 bg-white text-purple-600 px-4 py-2 rounded-xl font-medium transition-colors"
+                    className="inline-flex items-center gap-2 bg-white text-cyan-700 px-4 py-2 rounded-xl font-medium transition-colors"
                   >
                     View Project
                     <ExternalLink className="w-4 h-4" />

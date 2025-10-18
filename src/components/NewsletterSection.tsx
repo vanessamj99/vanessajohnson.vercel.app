@@ -161,13 +161,13 @@ export default function NewsletterSection() {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-white to-purple-50">
+    <section className="py-20 bg-gradient-to-br from-white to-cyan-50">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           {/* Header */}
           <div className="text-center mb-12">
             <div className="flex items-center justify-center gap-3 mb-4">
-              <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center">
+              <div className="w-12 h-12 bg-gradient-to-br from-cyan-600 to-indigo-600 rounded-full flex items-center justify-center">
                 <MessageSquare className="w-6 h-6 text-white" />
               </div>
             </div>
@@ -180,7 +180,7 @@ export default function NewsletterSection() {
           <div className="grid lg:grid-cols-2 gap-8">
             {/* Newsletter Info */}
             <div className="space-y-6">
-              <div className="bg-white rounded-2xl p-6 shadow-lg border border-purple-100">
+              <div className="bg-white rounded-2xl p-6 shadow-lg border border-cyan-100">
                 <h4 className="font-semibold text-gray-900 mb-4">Recent Publications</h4>
                 <div className="space-y-3">
                   {loading ? (
@@ -203,9 +203,9 @@ export default function NewsletterSection() {
                       <div 
                         key={index}
                         className={`p-3 rounded-lg ${
-                          index === 0 ? 'bg-gradient-to-r from-purple-50 to-pink-50' :
-                          index === 1 ? 'bg-gradient-to-r from-pink-50 to-orange-50' :
-                          'bg-gradient-to-r from-orange-50 to-yellow-50'
+                          index === 0 ? 'bg-gradient-to-r from-cyan-50 to-blue-50' :
+                          index === 1 ? 'bg-gradient-to-r from-blue-50 to-indigo-50' :
+                          'bg-gradient-to-r from-indigo-50 to-cyan-50'
                         }`}
                       >
                         <div className="font-medium text-sm text-gray-900">{article.title}</div>
@@ -219,7 +219,7 @@ export default function NewsletterSection() {
 
             {/* Newsletter Embed */}
             <div className="space-y-6">
-              <div className="bg-white rounded-2xl p-8 shadow-lg border border-purple-100">
+              <div className="bg-white rounded-2xl p-8 shadow-lg border border-cyan-100">
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Subscribe to Newsletter</h3>
                 <p className="text-gray-600 mb-6">
                   Stay updated with the latest insights, tips, and strategies for Android development and mobile engineering careers.
@@ -239,7 +239,7 @@ export default function NewsletterSection() {
                       onChange={handleInputChange}
                       required
                       placeholder="your.email@example.com"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all"
                     />
                   </div>
                   
@@ -254,7 +254,7 @@ export default function NewsletterSection() {
                       value={subscriptionData.name}
                       onChange={handleInputChange}
                       placeholder="Your Name"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all"
                     />
                   </div>
 
@@ -272,7 +272,7 @@ export default function NewsletterSection() {
                   <button 
                     type="submit"
                     disabled={isSubscribing}
-                    className="w-full bg-gradient-to-r from-purple-500 to-pink-500 disabled:from-gray-400 disabled:to-gray-500 text-white py-3 px-6 rounded-xl font-medium hover:from-purple-600 hover:to-pink-600 transition-all flex items-center justify-center gap-2"
+                    className="w-full bg-gradient-to-r from-cyan-600 to-indigo-600 disabled:from-gray-400 disabled:to-gray-500 text-white py-3 px-6 rounded-xl font-medium hover:from-cyan-700 hover:to-indigo-700 transition-all flex items-center justify-center gap-2"
                   >
                     {isSubscribing ? (
                       <>
@@ -300,17 +300,17 @@ export default function NewsletterSection() {
 
           {/* Centered Stats and Link */}
           <div className="mt-12 flex flex-col items-center space-y-6">
-            <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl p-6 border border-blue-100 max-w-md">
+            <div className="bg-gradient-to-br from-cyan-50 to-blue-50 rounded-2xl p-6 border border-cyan-100 max-w-md">
               <h4 className="font-semibold text-gray-900 mb-3 text-center">Newsletter Stats</h4>
               <div className="grid grid-cols-2 gap-4">
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-purple-600">
+                  <div className="text-2xl font-bold text-cyan-700">
                     {loading ? "..." : newsletterData.subscribers}
                   </div>
                   <div className="text-xs text-gray-600">Subscribers</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-pink-600">
+                  <div className="text-2xl font-bold text-indigo-700">
                     {loading ? "..." : newsletterData.totalArticles}
                   </div>
                   <div className="text-xs text-gray-600">Newsletters Published</div>
@@ -323,7 +323,7 @@ export default function NewsletterSection() {
                 href="https://vanessaonmobile.substack.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-purple-600 hover:text-purple-700 font-medium transition-colors"
+                className="inline-flex items-center gap-2 text-cyan-700 hover:text-cyan-800 font-medium transition-colors"
               >
                 <ExternalLink className="w-4 h-4" />
                 View All Articles on Substack

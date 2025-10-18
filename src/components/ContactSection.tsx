@@ -6,14 +6,6 @@ import { useState } from 'react';
 // Import talks array for dynamic count
 const talks = [
   {
-    title: 'What if GraphQL Knew Accessibility',
-    conference: 'GraphQLConf 2025',
-    location: 'Amsterdam, The Netherlands',
-    date: 'September 8-10, 2025',
-    status: 'upcoming',
-    description: 'Exploring how GraphQL can be leveraged to build more accessible applications and improve user experience.'
-  },
-  {
     title: 'Building Inclusive Jetpack Compose Apps: Leveraging Kotlin and the Accessibility Scanner',
     conference: 'TechBash 2025',
     location: 'Poconos, Pennsylvania',
@@ -22,20 +14,21 @@ const talks = [
     description: 'Sharing insights on building accessible Android applications using Jetpack Compose and the Accessibility Scanner.'
   },
   {
-    title: 'Jetpack Compose Performance: Debugging and Fixing Common Pitfalls',
-    conference: 'TechBash 2025',
-    location: 'Poconos, Pennsylvania',
-    date: 'November 5-7, 2025',
-    status: 'upcoming',
-    description: 'Deep dive into performance optimization techniques for Jetpack Compose applications and common debugging strategies.'
-  },
-  {
     title: 'Building Inclusive Jetpack Compose Apps: Leveraging Kotlin and the Accessibility Scanner',
     conference: 'Droidcon Italy 2025',
     location: 'Turin, Italy',
     date: 'November 19-20, 2025',
     status: 'upcoming',
     description: 'Sharing insights on building accessible Android applications using Jetpack Compose and leveraging the Accessibility Scanner for better user experience.'
+  },
+  {
+    title: 'What if GraphQL Knew Accessibility',
+    conference: 'GraphQLConf 2025',
+    location: 'Amsterdam, The Netherlands',
+    date: 'September 8-10, 2025',
+    status: 'completed',
+    link: 'https://www.youtube.com/watch?v=ttmp_zkHH_0',
+    description: 'Exploring how GraphQL can be leveraged to build more accessible applications and improve user experience.'
   },
   {
     title: 'Building Inclusive Jetpack Compose Apps: Leveraging Kotlin and the Accessibility Scanner',
@@ -110,7 +103,7 @@ export default function ContactSection() {
     <section id="contact" className="py-12 bg-white">
       <div className="container mx-auto px-4">
         {/* App Header */}
-        <div className="bg-gradient-to-r from-blue-500 to-green-500 rounded-2xl p-6 mb-6 text-white">
+        <div className="bg-gradient-to-r from-cyan-600 to-indigo-600 rounded-2xl p-6 mb-6 text-white">
           <div className="flex items-center justify-between">
             <div>
               <h2 className="text-2xl font-bold mb-1">
@@ -204,8 +197,8 @@ export default function ContactSection() {
                   <div className="text-sm text-gray-700">Active Projects</div>
                 </div>
                 <div className="text-center p-4 bg-gray-50 rounded-xl">
-                  <div className="text-2xl font-bold text-primary">100%</div>
-                  <div className="text-sm text-gray-600">Mobile Focus</div>
+                  <div className="text-2xl font-bold text-primary">📱</div>
+                  <div className="text-sm text-gray-600">Mobile and API Focused</div>
                 </div>
               </div>
             </div>
