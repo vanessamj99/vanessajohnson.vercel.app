@@ -14,12 +14,12 @@ interface Talk {
 
 const talks: Talk[] = [
   {
-    title: 'Building Inclusive Jetpack Compose Apps: Leveraging Kotlin and the Accessibility Scanner',
-    conference: 'TechBash 2025',
-    location: 'Poconos, Pennsylvania',
-    date: 'November 5-7, 2025',
+    title: 'TBA - APIDays Paris',
+    conference: 'APIDays Paris 2025',
+    location: 'Paris, France',
+    date: 'December 9-11, 2025',
     status: 'upcoming',
-    description: 'Sharing insights on building accessible Android applications using Jetpack Compose and the Accessibility Scanner.'
+    description: 'Speaking at APIDays Paris - The APIs meet AI conference: Innovation, Security, Sovereignty, Sustainability.'
   },
   {
     title: 'Building Inclusive Jetpack Compose Apps: Leveraging Kotlin and the Accessibility Scanner',
@@ -28,6 +28,15 @@ const talks: Talk[] = [
     date: 'November 19-20, 2025',
     status: 'upcoming',
     description: 'Sharing insights on building accessible Android applications using Jetpack Compose and leveraging the Accessibility Scanner for better user experience.'
+  },
+  {
+    title: 'Code & Hydrate: Build a Water Intake Tracker App (Android Edition)',
+    conference: 'Mentor Me Collective Workshop',
+    location: 'Virtual',
+    date: 'October 2024',
+    status: 'completed',
+    link: 'https://www.youtube.com/watch?v=J1YBcZzvS64',
+    description: 'Led a beginner-friendly workshop on Android app development, teaching participants to build a water intake tracker app using Kotlin, XML UI design, and local storage with SharedPreferences.'
   },
   {
     title: 'What if GraphQL Knew Accessibility',

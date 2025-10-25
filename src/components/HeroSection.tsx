@@ -6,12 +6,12 @@ import { useState, useEffect } from 'react';
 // Import talks array from SpeakingSection
 const talks = [
   {
-    title: 'Building Inclusive Jetpack Compose Apps: Leveraging Kotlin and the Accessibility Scanner',
-    conference: 'TechBash 2025',
-    location: 'Poconos, Pennsylvania',
-    date: 'November 5-7, 2025',
+    title: 'TBA - APIDays Paris',
+    conference: 'APIDays Paris 2025',
+    location: 'Paris, France',
+    date: 'December 9-11, 2025',
     status: 'upcoming',
-    description: 'Sharing insights on building accessible Android applications using Jetpack Compose and the Accessibility Scanner.'
+    description: 'Speaking at APIDays Paris - The APIs meet AI conference: Innovation, Security, Sovereignty, Sustainability.'
   },
   {
     title: 'Building Inclusive Jetpack Compose Apps: Leveraging Kotlin and the Accessibility Scanner',
@@ -20,6 +20,15 @@ const talks = [
     date: 'November 19-20, 2025',
     status: 'upcoming',
     description: 'Sharing insights on building accessible Android applications using Jetpack Compose and leveraging the Accessibility Scanner for better user experience.'
+  },
+  {
+    title: 'Code & Hydrate: Build a Water Intake Tracker App (Android Edition)',
+    conference: 'Mentor Me Collective Workshop',
+    location: 'Virtual',
+    date: 'October 2024',
+    status: 'completed',
+    link: 'https://www.youtube.com/watch?v=J1YBcZzvS64',
+    description: 'Led a beginner-friendly workshop on Android app development, teaching participants to build a water intake tracker app using Kotlin, XML UI design, and local storage with SharedPreferences.'
   },
   {
     title: 'What if GraphQL Knew Accessibility',
@@ -220,15 +229,15 @@ export default function HeroSection() {
                         <div className="space-y-2">
                           <div className="flex items-center gap-3 text-sm">
                             <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                            <span className="text-gray-600">Led Android Workshop - Mentor Me Collective</span>
+                          </div>
+                          <div className="flex items-center gap-3 text-sm">
+                            <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
                             <span className="text-gray-600">Spoke at GraphQLConf 2025</span>
                           </div>
                           <div className="flex items-center gap-3 text-sm">
                             <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
                             <span className="text-gray-600">Spoke at KotlinConf 2025</span>
-                          </div>
-                          <div className="flex items-center gap-3 text-sm">
-                            <div className="w-2 h-2 bg-purple-500 rounded-full animate-pulse"></div>
-                            <span className="text-gray-600">Google Summer of Code 2025</span>
                           </div>
                         </div>
                       </div>
@@ -323,8 +332,9 @@ export default function HeroSection() {
                       <div className="bg-gradient-to-br from-white to-indigo-50 rounded-2xl p-4 shadow-sm border border-indigo-100">
                         <h3 className="font-semibold text-gray-900 mb-3">Speaking Highlights</h3>
                         <div className="space-y-2 text-sm text-gray-600">
-                          <div>• TechBash 2025 - Building Inclusive Jetpack Compose Apps</div>
+                          <div>• APIDays Paris 2025 - TBA</div>
                           <div>• Droidcon Italy 2025 - Building Inclusive Jetpack Compose Apps</div>
+                          <div>• Mentor Me Collective - Code & Hydrate Workshop ✓</div>
                           <div>• GraphQLConf 2025 - What if GraphQL Knew Accessibility ✓</div>
                           <div>• KotlinConf 2025 - Building Inclusive Jetpack Compose Apps ✓</div>
                         </div>
