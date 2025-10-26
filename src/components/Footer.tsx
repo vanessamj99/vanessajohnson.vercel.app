@@ -70,20 +70,21 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold mb-3">Speaking</h4>
             <ul className="space-y-2 text-sm text-gray-400">
-              <li>KotlinConf 2025</li>
-              <li>GraphQLConf 2025</li>
-              <li>TechBash 2025</li>
+              <li>APIDays Paris 2025</li>
               <li>Droidcon Italy 2025</li>
+              <li>Mentor Me Collective</li>
+              <li>GraphQLConf 2025</li>
+              <li>KotlinConf 2025</li>
             </ul>
           </div>
           
           <div>
             <h4 className="font-semibold mb-3">Projects</h4>
             <ul className="space-y-2 text-sm text-gray-400">
-              <li>From Scratch Labs</li>
+              <li>Problems API Integration</li>
+              <li>Speaker Scout</li>
               <li>GutFeeling</li>
               <li>Gemini Collaboration IDE</li>
-              <li>Problems API Integration</li>
             </ul>
           </div>
         </div>

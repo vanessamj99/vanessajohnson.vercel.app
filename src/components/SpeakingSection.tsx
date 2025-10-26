@@ -36,7 +36,7 @@ const talks: Talk[] = [
     date: 'October 2024',
     status: 'completed',
     link: 'https://www.youtube.com/watch?v=J1YBcZzvS64',
-    description: 'Led a beginner-friendly workshop on Android app development, teaching participants to build a water intake tracker app using Kotlin, XML UI design, and local storage with SharedPreferences.'
+    description: 'Led a beginner friendly workshop on Android app development, teaching participants to build a water intake tracker app using Kotlin, XML UI design, and local storage with SharedPreferences.'
   },
   {
     title: 'What if GraphQL Knew Accessibility',

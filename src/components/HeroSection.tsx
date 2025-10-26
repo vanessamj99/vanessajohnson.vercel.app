@@ -28,7 +28,7 @@ const talks = [
     date: 'October 2024',
     status: 'completed',
     link: 'https://www.youtube.com/watch?v=J1YBcZzvS64',
-    description: 'Led a beginner-friendly workshop on Android app development, teaching participants to build a water intake tracker app using Kotlin, XML UI design, and local storage with SharedPreferences.'
+    description: 'Led a beginner friendly workshop on Android app development, teaching participants to build a water intake tracker app using Kotlin, XML UI design, and local storage with SharedPreferences.'
   },
   {
     title: 'What if GraphQL Knew Accessibility',
@@ -189,8 +189,8 @@ export default function HeroSection() {
                           <div className="text-xs text-gray-700">Talks</div>
                         </div>
                         <div className="bg-gradient-to-br from-teal-100 to-cyan-100 rounded-xl p-3 text-center shadow-sm border border-teal-200">
-                          <div className="text-lg font-bold text-teal-800">3</div>
-                          <div className="text-xs text-gray-700">Projects</div>
+                          <div className="text-lg font-bold text-teal-800">1</div>
+                          <div className="text-xs text-gray-700">Active Projects</div>
                         </div>
                       </div>
 
@@ -314,9 +314,9 @@ export default function HeroSection() {
                       <div className="bg-gradient-to-br from-white to-blue-50 rounded-2xl p-4 shadow-sm border border-blue-100">
                         <h3 className="font-semibold text-gray-900 mb-3">More Projects</h3>
                         <div className="space-y-3">
-                          <div className="p-3 bg-gradient-to-r from-green-50 to-blue-50 rounded-lg border border-green-200">
-                            <div className="font-medium text-sm text-gray-900">From Scratch Labs</div>
-                            <div className="text-xs text-gray-600">An upcoming educational platform</div>
+                          <div className="p-3 bg-gradient-to-r from-purple-50 to-pink-50 rounded-lg border border-purple-200">
+                            <div className="font-medium text-sm text-gray-900">Speaker Scout</div>
+                            <div className="text-xs text-gray-600">Conference discovery app for speakers</div>
                           </div>
                           <div className="p-3 bg-gradient-to-r from-teal-50 to-cyan-50 rounded-lg border border-teal-200">
                             <div className="font-medium text-sm text-gray-900">GutFeeling</div>

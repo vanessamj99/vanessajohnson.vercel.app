@@ -22,9 +22,9 @@ const projects: Project[] = [
     status: 'active'
   },
   {
-    title: 'From Scratch Labs',
-    description: 'An upcoming educational platform',
-    technologies: ['Educational Platform', 'Web Development', 'Learning Management'],
+    title: 'Speaker Scout',
+    description: 'An app for conference speakers to find conferences they can present at. Filter and discover speaking opportunities based on talk length, travel and accommodation coverage, location, and more!',
+    technologies: ['Kotlin Multiplatform', 'Compose Multiplatform', 'Firebase', 'Conference API', 'Filtering', 'Mobile App'],
     status: 'upcoming'
   },
   {
@@ -200,7 +200,7 @@ export default function ProjectsSection() {
         {/* Bottom Navigation Hint */}
         <div className="mt-8 text-center">
           <div className="inline-flex items-center gap-2 text-gray-500 text-sm">
-            <span>More projects coming soon</span>
+            <span>Building the future of mobile development</span>
             <div className="w-8 h-1 bg-gray-300 rounded-full"></div>
           </div>
         </div>
