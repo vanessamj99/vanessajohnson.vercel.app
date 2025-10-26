@@ -70,7 +70,7 @@ export default function SpeakingSection() {
                 Speaking
               </h2>
               <p className="text-white/80 text-sm">
-                Sharing knowledge at conferences
+                Sharing knowledge at conferences & in workshops
               </p>
             </div>
             <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">

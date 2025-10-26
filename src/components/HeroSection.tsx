@@ -179,18 +179,26 @@ export default function HeroSection() {
                       </div>
 
                       {/* Stats Cards */}
-                      <div className="grid grid-cols-3 gap-3">
+                      <div className="grid grid-cols-2 gap-3">
                         <div className="bg-gradient-to-br from-cyan-100 to-blue-100 rounded-xl p-3 text-center shadow-sm border border-cyan-200">
                           <div className="text-lg font-bold text-cyan-800">1+</div>
                           <div className="text-xs text-gray-700">Years Exp</div>
                         </div>
-                        <div className="bg-gradient-to-br from-blue-100 to-indigo-100 rounded-xl p-3 text-center shadow-sm border border-blue-200">
-                          <div className="text-lg font-bold text-blue-800">{talks.length}</div>
-                          <div className="text-xs text-gray-700">Talks</div>
-                        </div>
                         <div className="bg-gradient-to-br from-teal-100 to-cyan-100 rounded-xl p-3 text-center shadow-sm border border-teal-200">
                           <div className="text-lg font-bold text-teal-800">1</div>
-                          <div className="text-xs text-gray-700">Active Projects</div>
+                          <div className="text-xs text-gray-700">Active Project</div>
+                        </div>
+                      </div>
+                      
+                      {/* Speaking Stats */}
+                      <div className="grid grid-cols-2 gap-3">
+                        <div className="bg-gradient-to-br from-blue-100 to-indigo-100 rounded-xl p-3 text-center shadow-sm border border-blue-200">
+                          <div className="text-lg font-bold text-blue-800">4</div>
+                          <div className="text-xs text-gray-700">Conference Talks</div>
+                        </div>
+                        <div className="bg-gradient-to-br from-purple-100 to-pink-100 rounded-xl p-3 text-center shadow-sm border border-purple-200">
+                          <div className="text-lg font-bold text-purple-800">1</div>
+                          <div className="text-xs text-gray-700">Workshop</div>
                         </div>
                       </div>
 

@@ -198,12 +198,16 @@ export default function ContactSection() {
                   <div className="text-sm text-gray-700">Years Experience</div>
                 </div>
                 <div className="text-center p-4 bg-gray-50 rounded-xl">
-                  <div className="text-2xl font-bold text-blue-800">{talks.length}</div>
+                  <div className="text-2xl font-bold text-blue-800">1</div>
+                  <div className="text-sm text-gray-700">Active Project</div>
+                </div>
+                <div className="text-center p-4 bg-gray-50 rounded-xl">
+                  <div className="text-2xl font-bold text-blue-800">4</div>
                   <div className="text-sm text-gray-700">Conference Talks</div>
                 </div>
                 <div className="text-center p-4 bg-gray-50 rounded-xl">
-                  <div className="text-2xl font-bold text-blue-800">1</div>
-                  <div className="text-sm text-gray-700">Active Projects</div>
+                  <div className="text-2xl font-bold text-purple-800">1</div>
+                  <div className="text-sm text-gray-700">Workshop</div>
                 </div>
                 <div className="text-center p-4 bg-gray-50 rounded-xl">
                   <div className="text-2xl font-bold text-primary">📱</div>
