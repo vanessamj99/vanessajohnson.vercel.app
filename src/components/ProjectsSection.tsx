@@ -14,18 +14,18 @@ interface Project {
 
 const projects: Project[] = [
   {
+    title: 'Speaker Scout',
+    description: 'An app for conference speakers to find conferences they can present at. Filter and discover speaking opportunities based on talk length, travel and accommodation coverage, location, and more!',
+    technologies: ['Kotlin Multiplatform', 'Firebase', 'Filtering', 'Mobile App'],
+    featured: true,
+    status: 'upcoming'
+  },
+  {
     title: 'Kotlin Code Quality with Problems API',
     description: 'Google Summer of Code 2025 project integrating the new Problems API in detekt and ktlint plugins to improve code quality tooling and provide better developer experience.',
     technologies: ['Kotlin', 'Gradle', 'Problems API', 'detekt', 'ktlint'],
     link: 'https://community.gradle.org/events/gsoc/2025/kotlin-code-quality-with-problems-api/',
-    featured: true,
     status: 'active'
-  },
-  {
-    title: 'Speaker Scout',
-    description: 'An app for conference speakers to find conferences they can present at. Filter and discover speaking opportunities based on talk length, travel and accommodation coverage, location, and more!',
-    technologies: ['Kotlin Multiplatform', 'Compose Multiplatform', 'Firebase', 'Conference API', 'Filtering', 'Mobile App'],
-    status: 'upcoming'
   },
   {
     title: 'GutFeeling',

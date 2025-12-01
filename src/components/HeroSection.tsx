@@ -6,20 +6,20 @@ import { useState, useEffect } from 'react';
 // Import talks array from SpeakingSection
 const talks = [
   {
-    title: 'TBA - APIDays Paris',
+    title: 'What if Your API Spoke Accessibility?',
     conference: 'APIDays Paris 2025',
     location: 'Paris, France',
     date: 'December 9-11, 2025',
     status: 'upcoming',
-    description: 'Speaking at APIDays Paris - The APIs meet AI conference: Innovation, Security, Sovereignty, Sustainability.'
+    description: 'APIs shape the user experience long before UI code is written, but accessibility is almost always left until the end. This talk shows how to embed accessibility metadata directly into GraphQL schemas using custom directives and code generation, enabling clients (Android, iOS, and web) to get accessible defaults from day one. We\'ll cover directive design, exposing metadata in generated types, and how frontends like Jetpack Compose or SwiftUI consume it. A repository with working code examples will be provided.'
   },
   {
     title: 'Building Inclusive Jetpack Compose Apps: Leveraging Kotlin and the Accessibility Scanner',
     conference: 'Droidcon Italy 2025',
     location: 'Turin, Italy',
     date: 'November 19-20, 2025',
-    status: 'upcoming',
-    description: 'Sharing insights on building accessible Android applications using Jetpack Compose and leveraging the Accessibility Scanner for better user experience.'
+    status: 'completed',
+    description: 'Accessibility is a growing and important aspect in app development that isn\'t always prioritized. This talk explores how Jetpack Compose\'s Kotlin-based declarative approach offers a simplified path to building inclusive UIs. Learn about Kotlin-based Semantics, navigational cues, and how to leverage the Accessibility Scanner to quickly identify and address common accessibility issues. Discover straightforward changes that yield dramatic improvements for user experience, making your apps more user-friendly for a wide range of individuals.'
   },
   {
     title: 'Code & Hydrate: Build a Water Intake Tracker App (Android Edition)',
@@ -37,7 +37,7 @@ const talks = [
     date: 'September 8-10, 2025',
     status: 'completed',
     link: 'https://www.youtube.com/watch?v=ttmp_zkHH_0',
-    description: 'Exploring how GraphQL can be leveraged to build more accessible applications and improve user experience.'
+    description: 'What if your GraphQL schema could do more than provide data? What if it could help your app be more accessible from the start? This lightning talk explores embedding accessibility metadata directly into GraphQL schemas. Inspired by Kotlin semantics in Jetpack Compose, we\'ll examine annotating fields with labels, roles, or screen reader hints that support screen readers, improve navigation, and power automated accessibility testing. This is a call to rethink the developer experience and treat accessibility as a first-class concern, reimagining GraphQL not just as a data layer, but as an inclusive design enabler.'
   },
   {
     title: 'Building Inclusive Jetpack Compose Apps: Leveraging Kotlin and the Accessibility Scanner',
@@ -46,7 +46,7 @@ const talks = [
     date: 'May 21-23, 2025',
     status: 'completed',
     link: 'https://kotlinconf.com/talks/795897/',
-    description: 'Presented on building accessible Android applications using Jetpack Compose and leveraging the Accessibility Scanner for better user experience.'
+    description: 'Accessibility is a growing and important aspect in app development that isn\'t always prioritized. Google\'s efforts include making apps more accessible through Jetpack Compose, their new standard for building UIs. Jetpack Compose\'s Kotlin-based declarative approach offers a simplified path to building inclusive UIs. Within Jetpack Compose, powerful tools like the Accessibility Scanner can quickly identify and address common accessibility issues, improving the overall user experience. This talk demonstrates that straightforward changes yield dramatic improvements, showing concrete strategies to increase inclusivity in your projects.'
   }
 ];
 
@@ -209,26 +209,17 @@ export default function HeroSection() {
                           <span className="text-yellow-300 font-medium">Featured Project</span>
                         </div>
                         <h3 className="text-xl font-bold mb-4">
-                          Kotlin Code Quality with Problems API
+                          Speaker Scout
                         </h3>
                         <p className="text-white/90 mb-6 leading-relaxed text-sm">
-                          Google Summer of Code 2025 project integrating the new Problems API in detekt and ktlint plugins to improve code quality tooling and provide better developer experience.
+                          An app for conference speakers to find conferences they can present at. Filter and discover speaking opportunities based on talk length, travel and accommodation coverage, location, and more!
                         </p>
                         <div className="flex flex-wrap gap-2 mb-6">
-                          <span className="px-3 py-1 bg-white/20 text-white rounded-full text-xs font-medium">Kotlin</span>
-                          <span className="px-3 py-1 bg-white/20 text-white rounded-full text-xs font-medium">Gradle</span>
-                          <span className="px-3 py-1 bg-white/20 text-white rounded-full text-xs font-medium">Problems API</span>
-                          <span className="px-3 py-1 bg-white/20 text-white rounded-full text-xs font-medium">detekt</span>
-                          <span className="px-3 py-1 bg-white/20 text-white rounded-full text-xs font-medium">ktlint</span>
+                          <span className="px-3 py-1 bg-white/20 text-white rounded-full text-xs font-medium">Kotlin Multiplatform</span>
+                          <span className="px-3 py-1 bg-white/20 text-white rounded-full text-xs font-medium">Firebase</span>
+                          <span className="px-3 py-1 bg-white/20 text-white rounded-full text-xs font-medium">Filtering</span>
+                          <span className="px-3 py-1 bg-white/20 text-white rounded-full text-xs font-medium">Mobile App</span>
                         </div>
-                        <a
-                          href="https://community.gradle.org/events/gsoc/2025/kotlin-code-quality-with-problems-api/"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center gap-2 bg-white text-cyan-700 px-4 py-2 rounded-xl font-medium transition-colors"
-                        >
-                          View Project
-                        </a>
                       </div>
 
                       {/* Recent Activity */}
@@ -237,15 +228,15 @@ export default function HeroSection() {
                         <div className="space-y-2">
                           <div className="flex items-center gap-3 text-sm">
                             <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                            <span className="text-gray-600">Spoke at Droidcon Italy 2025</span>
+                          </div>
+                          <div className="flex items-center gap-3 text-sm">
+                            <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
                             <span className="text-gray-600">Led Android Workshop - Mentor Me Collective</span>
                           </div>
                           <div className="flex items-center gap-3 text-sm">
                             <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
                             <span className="text-gray-600">Spoke at GraphQLConf 2025</span>
-                          </div>
-                          <div className="flex items-center gap-3 text-sm">
-                            <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                            <span className="text-gray-600">Spoke at KotlinConf 2025</span>
                           </div>
                         </div>
                       </div>
@@ -254,7 +245,7 @@ export default function HeroSection() {
                       <div className="bg-gradient-to-br from-white to-pink-50 rounded-2xl p-4 shadow-sm border border-pink-100">
                         <h3 className="font-semibold text-gray-900 mb-3">Current Focus</h3>
                         <p className="text-gray-600 text-sm leading-relaxed">
-                          Utilized Jetpack Compose in Kotlin, deeplinking, graphql, retrofit, practiced MVVM, used repositories & use cases throughout my work at the NYT thus far. I contributed to the big release of the friends tab, tech led adding the ConnectionsBot to the app, owned a new subscribe message in the app, and am currently tech leading a new upcoming feature.
+                          Building mobile experiences using Jetpack Compose, Kotlin, GraphQL, Retrofit, and MVVM architecture with repositories and use cases. Contributed to major releases including the friends tab launch. Tech led multiple features including the ConnectionsBot integration, a new subscription message, the strands archive, and completed the summer intern project I mentored delivering dark mode to the apps.
                         </p>
                       </div>
 
@@ -340,8 +331,8 @@ export default function HeroSection() {
                       <div className="bg-gradient-to-br from-white to-indigo-50 rounded-2xl p-4 shadow-sm border border-indigo-100">
                         <h3 className="font-semibold text-gray-900 mb-3">Speaking Highlights</h3>
                         <div className="space-y-2 text-sm text-gray-600">
-                          <div>• APIDays Paris 2025 - TBA</div>
-                          <div>• Droidcon Italy 2025 - Building Inclusive Jetpack Compose Apps</div>
+                          <div>• APIDays Paris 2025 - What if Your API Spoke Accessibility?</div>
+                          <div>• Droidcon Italy 2025 - Building Inclusive Jetpack Compose Apps ✓</div>
                           <div>• Mentor Me Collective - Code & Hydrate Workshop ✓</div>
                           <div>• GraphQLConf 2025 - What if GraphQL Knew Accessibility ✓</div>
                           <div>• KotlinConf 2025 - Building Inclusive Jetpack Compose Apps ✓</div>

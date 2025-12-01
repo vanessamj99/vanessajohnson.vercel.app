@@ -14,20 +14,20 @@ interface Talk {
 
 const talks: Talk[] = [
   {
-    title: 'TBA - APIDays Paris',
+    title: 'What if Your API Spoke Accessibility?',
     conference: 'APIDays Paris 2025',
     location: 'Paris, France',
     date: 'December 9-11, 2025',
     status: 'upcoming',
-    description: 'Speaking at APIDays Paris - The APIs meet AI conference: Innovation, Security, Sovereignty, Sustainability.'
+    description: 'APIs shape the user experience long before UI code is written, but accessibility is almost always left until the end. This talk shows how to embed accessibility metadata directly into GraphQL schemas using custom directives and code generation, enabling clients (Android, iOS, and web) to get accessible defaults from day one. We\'ll cover directive design, exposing metadata in generated types, and how frontends like Jetpack Compose or SwiftUI consume it. A repository with working code examples will be provided.'
   },
   {
     title: 'Building Inclusive Jetpack Compose Apps: Leveraging Kotlin and the Accessibility Scanner',
     conference: 'Droidcon Italy 2025',
     location: 'Turin, Italy',
     date: 'November 19-20, 2025',
-    status: 'upcoming',
-    description: 'Sharing insights on building accessible Android applications using Jetpack Compose and leveraging the Accessibility Scanner for better user experience.'
+    status: 'completed',
+    description: 'Accessibility is a growing and important aspect in app development that isn\'t always prioritized. This talk explores how Jetpack Compose\'s Kotlin-based declarative approach offers a simplified path to building inclusive UIs. Learn about Kotlin-based Semantics, navigational cues, and how to leverage the Accessibility Scanner to quickly identify and address common accessibility issues. Discover straightforward changes that yield dramatic improvements for user experience, making your apps more user-friendly for a wide range of individuals.'
   },
   {
     title: 'Code & Hydrate: Build a Water Intake Tracker App (Android Edition)',
@@ -45,7 +45,7 @@ const talks: Talk[] = [
     date: 'September 8-10, 2025',
     status: 'completed',
     link: 'https://www.youtube.com/watch?v=ttmp_zkHH_0',
-    description: 'Exploring how GraphQL can be leveraged to build more accessible applications and improve user experience.'
+    description: 'What if your GraphQL schema could do more than provide data? What if it could help your app be more accessible from the start? This lightning talk explores embedding accessibility metadata directly into GraphQL schemas. Inspired by Kotlin semantics in Jetpack Compose, we\'ll examine annotating fields with labels, roles, or screen reader hints that support screen readers, improve navigation, and power automated accessibility testing. This is a call to rethink the developer experience and treat accessibility as a first-class concern, reimagining GraphQL not just as a data layer, but as an inclusive design enabler.'
   },
   {
     title: 'Building Inclusive Jetpack Compose Apps: Leveraging Kotlin and the Accessibility Scanner',
@@ -54,7 +54,7 @@ const talks: Talk[] = [
     date: 'May 21-23, 2025',
     status: 'completed',
     link: 'https://kotlinconf.com/talks/795897/',
-    description: 'Presented on building accessible Android applications using Jetpack Compose and leveraging the Accessibility Scanner for better user experience.'
+    description: 'Accessibility is a growing and important aspect in app development that isn\'t always prioritized. Google\'s efforts include making apps more accessible through Jetpack Compose, their new standard for building UIs. Jetpack Compose\'s Kotlin-based declarative approach offers a simplified path to building inclusive UIs. Within Jetpack Compose, powerful tools like the Accessibility Scanner can quickly identify and address common accessibility issues, improving the overall user experience. This talk demonstrates that straightforward changes yield dramatic improvements, showing concrete strategies to increase inclusivity in your projects.'
   }
 ];
 

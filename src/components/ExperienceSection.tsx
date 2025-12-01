@@ -17,7 +17,7 @@ const experiences: Experience[] = [
     role: 'Android Engineer',
     location: 'New York, NY',
     duration: 'August 2024 - Present',
-    description: 'Utilized Jetpack Compose in Kotlin, deeplinking, graphql, retrofit, practiced MVVM, used repositories & use cases throughout my work at the NYT thus far. I contributed to the big release of the friends tab, tech led adding the ConnectionsBot to the app, owned a new subscribe message in the app, and am currently tech leading a new upcoming feature.',
+    description: 'Building mobile experiences using Jetpack Compose, Kotlin, GraphQL, Retrofit, and MVVM architecture with repositories and use cases. Contributed to major releases including the friends tab launch. Tech led multiple features including the ConnectionsBot integration, a new subscription message, the strands archive, and completed the summer intern project I mentored delivering dark mode to the apps.',
     technologies: ['Kotlin', 'Jetpack Compose', 'GraphQL', 'Retrofit', 'MVVM', 'Deeplinking', 'Repositories', 'Use Cases']
   },
   {
