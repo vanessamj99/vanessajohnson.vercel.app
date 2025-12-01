@@ -28,7 +28,7 @@ export default function Footer() {
               <Mail className="w-5 h-5" />
             </a>
             <a
-              href="https://linkedin.com/in/vanessamj99"
+              href="https://www.linkedin.com/in/vanessa-johnson999/"
               target="_blank"
               rel="noopener noreferrer"
               className="w-10 h-10 bg-gray-800 rounded-xl flex items-center justify-center hover:bg-blue-600 transition-colors"
@@ -81,8 +81,8 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold mb-3">Projects</h4>
             <ul className="space-y-2 text-sm text-gray-400">
-              <li>Problems API Integration</li>
               <li>Speaker Scout</li>
+              <li>Problems API Integration</li>
               <li>GutFeeling</li>
               <li>Gemini Collaboration IDE</li>
             </ul>

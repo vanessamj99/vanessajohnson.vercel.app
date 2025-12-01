@@ -122,8 +122,8 @@ function parseRSSFeed(xmlText: string) {
   try {
     // Parse RSS feed with CDATA sections
     const itemRegex = /<item>([\s\S]*?)<\/item>/g;
-    const titleRegex = /<title><!\[CDATA\[([^\]]+)\]\]><\/title>/;
-    const descriptionRegex = /<description><!\[CDATA\[([^\]]+)\]\]><\/description>/;
+    const titleRegex = /<title><!\[CDATA\[([\s\S]*?)\]\]><\/title>/;
+    const descriptionRegex = /<description><!\[CDATA\[([\s\S]*?)\]\]><\/description>/;
     const pubDateRegex = /<pubDate>([^<]+)<\/pubDate>/;
     
     let match;
@@ -135,9 +135,17 @@ function parseRSSFeed(xmlText: string) {
       const dateMatch = itemContent.match(pubDateRegex);
       
       if (titleMatch && descriptionMatch) {
+        // Decode HTML entities and fix character encoding issues
+        let title = titleMatch[1].trim();
+        let description = descriptionMatch[1].trim();
+        
+        // Fix common HTML entity issues
+        title = decodeHtmlEntities(title);
+        description = decodeHtmlEntities(description);
+        
         articles.push({
-          title: titleMatch[1].trim(),
-          description: descriptionMatch[1].trim(),
+          title: title,
+          description: description,
           date: dateMatch ? dateMatch[1].trim() : new Date().toISOString().split('T')[0]
         });
       }
@@ -147,6 +155,26 @@ function parseRSSFeed(xmlText: string) {
   }
   
   return articles;
+}
+
+function decodeHtmlEntities(text: string): string {
+  // Decode HTML entities (server-side compatible)
+  return text
+    .replace(/&#8217;/g, "'")  // Right single quotation mark
+    .replace(/&#8216;/g, "'")  // Left single quotation mark
+    .replace(/&#8220;/g, '"')  // Left double quotation mark
+    .replace(/&#8221;/g, '"')  // Right double quotation mark
+    .replace(/&#8211;/g, '–')  // En dash
+    .replace(/&#8212;/g, '—')  // Em dash
+    .replace(/&amp;/g, '&')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+    .replace(/&apos;/g, "'")
+    .replace(/&nbsp;/g, ' ')
+    .replace(/&#8230;/g, '…')  // Ellipsis
+    .replace(/&hellip;/g, '…');  // Ellipsis (named entity)
 }
 
 // Note: parseSubscriberCount function removed as Substack RSS doesn't include subscriber data
