@@ -5,12 +5,37 @@ import { Mail, Linkedin, Github, MessageCircle } from 'lucide-react';
 // Import talks array for dynamic count
 const talks = [
   {
+    title: 'Stop Guessing A11y: Auto Generate Playwright Tests from Your GraphQL Schema',
+    conference: 'SeleniumConf & AppiumConf 2026',
+    location: 'Valencia, Spain',
+    date: 'May 6-8, 2026',
+    status: 'upcoming',
+    description: 'Demonstrating how to turn schema-level accessibility annotations into Playwright coverage automatically—cutting flakiness, raising confidence, and giving QA repeatable a11y checks out of the box.'
+  },
+  {
+    title: 'Server Driven Accessibility: Embedding UI Semantics Into Your GraphQL Schema',
+    conference: 'Devoxx Greece 2026',
+    location: 'Athens, Greece',
+    date: 'April 23-25, 2026',
+    status: 'upcoming',
+    description: 'A deep dive into driving accessibility from the backend by pushing semantic hints through GraphQL. We cover directive patterns, client fallbacks, and how to keep accessibility metadata fresh as products ship quickly.'
+  },
+  {
+    title: 'Preserving Play: How the Wordle, Connections & Strand Archives Fuel Ritual and Connection in NYT Games',
+    conference: 'GDC 2026',
+    location: 'San Francisco, California, USA',
+    date: 'March 9-13, 2026',
+    status: 'upcoming',
+    description: 'Sharing how the archival work behind Wordle, Connections, and Strands builds ritual, community, and accessibility for players—plus how thoughtful platform choices keep puzzles inclusive at scale.'
+  },
+  {
     title: 'What if Your API Spoke Accessibility?',
     conference: 'APIDays Paris 2025',
     location: 'Paris, France',
     date: 'December 9-11, 2025',
-    status: 'upcoming',
-    description: 'APIs shape the user experience long before UI code is written, but accessibility is almost always left until the end. This talk shows how to embed accessibility metadata directly into GraphQL schemas using custom directives and code generation, enabling clients (Android, iOS, and web) to get accessible defaults from day one. We\'ll cover directive design, exposing metadata in generated types, and how frontends like Jetpack Compose or SwiftUI consume it. A repository with working code examples will be provided.'
+    status: 'completed',
+    link: 'https://www.youtube.com/watch?v=yjbcfc_0vBM',
+    description: 'APIs shape the user experience long before UI code is written, but accessibility is almost always left until the end. This talk shows how to embed accessibility metadata directly into GraphQL schemas using custom directives and code generation, enabling clients (Android, iOS, and web) to get accessible defaults from day one. We\'ll cover directive design, exposing metadata in generated types, and how frontends like Jetpack Compose or SwiftUI consume it. A repository with working code examples is available alongside the recorded session.'
   },
   {
     title: 'Building Inclusive Jetpack Compose Apps: Leveraging Kotlin and the Accessibility Scanner',
@@ -24,7 +49,7 @@ const talks = [
     title: 'Code & Hydrate: Build a Water Intake Tracker App (Android Edition)',
     conference: 'Mentor Me Collective Workshop',
     location: 'Virtual',
-    date: 'October 2024',
+    date: 'October 2025',
     status: 'completed',
     link: 'https://www.youtube.com/watch?v=J1YBcZzvS64',
     description: 'Led a beginner friendly workshop on Android app development, teaching participants to build a water intake tracker app using Kotlin, XML UI design, and local storage with SharedPreferences.'
@@ -143,7 +168,7 @@ export default function ContactSection() {
                 <div className="text-sm text-gray-700">Active Project</div>
               </div>
               <div className="text-center p-4 bg-gray-50 rounded-xl">
-                <div className="text-2xl font-bold text-blue-800">4</div>
+                <div className="text-2xl font-bold text-blue-800">8</div>
                 <div className="text-sm text-gray-700">Conference Talks</div>
               </div>
               <div className="text-center p-4 bg-gray-50 rounded-xl">

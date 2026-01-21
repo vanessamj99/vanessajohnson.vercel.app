@@ -6,12 +6,37 @@ import { useState, useEffect } from 'react';
 // Import talks array from SpeakingSection
 const talks = [
   {
+    title: 'Stop Guessing A11y: Auto Generate Playwright Tests from Your GraphQL Schema',
+    conference: 'SeleniumConf & AppiumConf 2026',
+    location: 'Valencia, Spain',
+    date: 'May 6-8, 2026',
+    status: 'upcoming',
+    description: 'Demonstrating how to turn schema-level accessibility annotations into Playwright coverage automatically—cutting flakiness, raising confidence, and giving QA repeatable a11y checks out of the box.'
+  },
+  {
+    title: 'Server Driven Accessibility: Embedding UI Semantics Into Your GraphQL Schema',
+    conference: 'Devoxx Greece 2026',
+    location: 'Athens, Greece',
+    date: 'April 23-25, 2026',
+    status: 'upcoming',
+    description: 'A deep dive into driving accessibility from the backend by pushing semantic hints through GraphQL. We cover directive patterns, client fallbacks, and how to keep accessibility metadata fresh as products ship quickly.'
+  },
+  {
+    title: 'Preserving Play: How the Wordle, Connections & Strand Archives Fuel Ritual and Connection in NYT Games',
+    conference: 'GDC 2026',
+    location: 'San Francisco, California, USA',
+    date: 'March 9-13, 2026',
+    status: 'upcoming',
+    description: 'Sharing how the archival work behind Wordle, Connections, and Strands builds ritual, community, and accessibility for players—plus how thoughtful platform choices keep puzzles inclusive at scale.'
+  },
+  {
     title: 'What if Your API Spoke Accessibility?',
     conference: 'APIDays Paris 2025',
     location: 'Paris, France',
     date: 'December 9-11, 2025',
-    status: 'upcoming',
-    description: 'APIs shape the user experience long before UI code is written, but accessibility is almost always left until the end. This talk shows how to embed accessibility metadata directly into GraphQL schemas using custom directives and code generation, enabling clients (Android, iOS, and web) to get accessible defaults from day one. We\'ll cover directive design, exposing metadata in generated types, and how frontends like Jetpack Compose or SwiftUI consume it. A repository with working code examples will be provided.'
+    status: 'completed',
+    link: 'https://www.youtube.com/watch?v=yjbcfc_0vBM',
+    description: 'APIs shape the user experience long before UI code is written, but accessibility is almost always left until the end. This talk shows how to embed accessibility metadata directly into GraphQL schemas using custom directives and code generation, enabling clients (Android, iOS, and web) to get accessible defaults from day one. We\'ll cover directive design, exposing metadata in generated types, and how frontends like Jetpack Compose or SwiftUI consume it. A repository with working code examples is available alongside the recorded session.'
   },
   {
     title: 'Building Inclusive Jetpack Compose Apps: Leveraging Kotlin and the Accessibility Scanner',
@@ -25,7 +50,7 @@ const talks = [
     title: 'Code & Hydrate: Build a Water Intake Tracker App (Android Edition)',
     conference: 'Mentor Me Collective Workshop',
     location: 'Virtual',
-    date: 'October 2024',
+    date: 'October 2025',
     status: 'completed',
     link: 'https://www.youtube.com/watch?v=J1YBcZzvS64',
     description: 'Led a beginner friendly workshop on Android app development, teaching participants to build a water intake tracker app using Kotlin, XML UI design, and local storage with SharedPreferences.'
@@ -193,7 +218,7 @@ export default function HeroSection() {
                       {/* Speaking Stats */}
                       <div className="grid grid-cols-2 gap-3">
                         <div className="bg-gradient-to-br from-blue-100 to-indigo-100 rounded-xl p-3 text-center shadow-sm border border-blue-200">
-                          <div className="text-lg font-bold text-blue-800">4</div>
+                          <div className="text-lg font-bold text-blue-800">8</div>
                           <div className="text-xs text-gray-700">Conference Talks</div>
                         </div>
                         <div className="bg-gradient-to-br from-purple-100 to-pink-100 rounded-xl p-3 text-center shadow-sm border border-purple-200">
@@ -228,15 +253,19 @@ export default function HeroSection() {
                         <div className="space-y-2">
                           <div className="flex items-center gap-3 text-sm">
                             <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                            <span className="text-gray-600">Spoke at Droidcon Italy 2025</span>
+                            <span className="text-gray-600">Upcoming: SeleniumConf & AppiumConf 2026 - Stop Guessing A11y</span>
                           </div>
                           <div className="flex items-center gap-3 text-sm">
                             <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                            <span className="text-gray-600">Led Android Workshop - Mentor Me Collective</span>
+                            <span className="text-gray-600">Upcoming: Devoxx Greece 2026 - Server Driven Accessibility</span>
                           </div>
                           <div className="flex items-center gap-3 text-sm">
                             <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                            <span className="text-gray-600">Spoke at GraphQLConf 2025</span>
+                            <span className="text-gray-600">Upcoming: GDC 2026 - Preserving Play (NYT Games)</span>
+                          </div>
+                          <div className="flex items-center gap-3 text-sm">
+                            <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                            <span className="text-gray-600">Completed APIDays Paris 2025 (recording live)</span>
                           </div>
                         </div>
                       </div>
@@ -331,7 +360,10 @@ export default function HeroSection() {
                       <div className="bg-gradient-to-br from-white to-indigo-50 rounded-2xl p-4 shadow-sm border border-indigo-100">
                         <h3 className="font-semibold text-gray-900 mb-3">Speaking Highlights</h3>
                         <div className="space-y-2 text-sm text-gray-600">
-                          <div>• APIDays Paris 2025 - What if Your API Spoke Accessibility?</div>
+                          <div>• SeleniumConf & AppiumConf 2026 - Stop Guessing A11y</div>
+                          <div>• Devoxx Greece 2026 - Server Driven Accessibility</div>
+                          <div>• GDC 2026 - Preserving Play: Wordle, Connections & Strands archives</div>
+                          <div>• APIDays Paris 2025 - What if Your API Spoke Accessibility? ✓</div>
                           <div>• Droidcon Italy 2025 - Building Inclusive Jetpack Compose Apps ✓</div>
                           <div>• Mentor Me Collective - Code & Hydrate Workshop ✓</div>
                           <div>• GraphQLConf 2025 - What if GraphQL Knew Accessibility ✓</div>
