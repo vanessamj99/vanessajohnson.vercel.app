@@ -21,14 +21,6 @@ const talks = [
     description: 'A deep dive into driving accessibility from the backend by pushing semantic hints through GraphQL. We cover directive patterns, client fallbacks, and how to keep accessibility metadata fresh as products ship quickly.'
   },
   {
-    title: 'Preserving Play: How the Wordle, Connections & Strand Archives Fuel Ritual and Connection in NYT Games',
-    conference: 'GDC 2026',
-    location: 'San Francisco, California, USA',
-    date: 'March 9-13, 2026',
-    status: 'upcoming',
-    description: 'Sharing how the archival work behind Wordle, Connections, and Strands builds ritual, community, and accessibility for players—plus how thoughtful platform choices keep puzzles inclusive at scale.'
-  },
-  {
     title: 'What if Your API Spoke Accessibility?',
     conference: 'APIDays Paris 2025',
     location: 'Paris, France',
@@ -168,7 +160,7 @@ export default function ContactSection() {
                 <div className="text-sm text-gray-700">Active Project</div>
               </div>
               <div className="text-center p-4 bg-gray-50 rounded-xl">
-                <div className="text-2xl font-bold text-blue-800">8</div>
+                <div className="text-2xl font-bold text-blue-800">7</div>
                 <div className="text-sm text-gray-700">Conference Talks</div>
               </div>
               <div className="text-center p-4 bg-gray-50 rounded-xl">

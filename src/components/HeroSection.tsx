@@ -22,14 +22,6 @@ const talks = [
     description: 'A deep dive into driving accessibility from the backend by pushing semantic hints through GraphQL. We cover directive patterns, client fallbacks, and how to keep accessibility metadata fresh as products ship quickly.'
   },
   {
-    title: 'Preserving Play: How the Wordle, Connections & Strand Archives Fuel Ritual and Connection in NYT Games',
-    conference: 'GDC 2026',
-    location: 'San Francisco, California, USA',
-    date: 'March 9-13, 2026',
-    status: 'upcoming',
-    description: 'Sharing how the archival work behind Wordle, Connections, and Strands builds ritual, community, and accessibility for players—plus how thoughtful platform choices keep puzzles inclusive at scale.'
-  },
-  {
     title: 'What if Your API Spoke Accessibility?',
     conference: 'APIDays Paris 2025',
     location: 'Paris, France',
@@ -218,7 +210,7 @@ export default function HeroSection() {
                       {/* Speaking Stats */}
                       <div className="grid grid-cols-2 gap-3">
                         <div className="bg-gradient-to-br from-blue-100 to-indigo-100 rounded-xl p-3 text-center shadow-sm border border-blue-200">
-                          <div className="text-lg font-bold text-blue-800">8</div>
+                          <div className="text-lg font-bold text-blue-800">7</div>
                           <div className="text-xs text-gray-700">Conference Talks</div>
                         </div>
                         <div className="bg-gradient-to-br from-purple-100 to-pink-100 rounded-xl p-3 text-center shadow-sm border border-purple-200">
@@ -258,10 +250,6 @@ export default function HeroSection() {
                           <div className="flex items-center gap-3 text-sm">
                             <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
                             <span className="text-gray-600">Upcoming: Devoxx Greece 2026 - Server Driven Accessibility</span>
-                          </div>
-                          <div className="flex items-center gap-3 text-sm">
-                            <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                            <span className="text-gray-600">Upcoming: GDC 2026 - Preserving Play (NYT Games)</span>
                           </div>
                           <div className="flex items-center gap-3 text-sm">
                             <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
@@ -362,7 +350,6 @@ export default function HeroSection() {
                         <div className="space-y-2 text-sm text-gray-600">
                           <div>• SeleniumConf & AppiumConf 2026 - Stop Guessing A11y</div>
                           <div>• Devoxx Greece 2026 - Server Driven Accessibility</div>
-                          <div>• GDC 2026 - Preserving Play: Wordle, Connections & Strands archives</div>
                           <div>• APIDays Paris 2025 - What if Your API Spoke Accessibility? ✓</div>
                           <div>• Droidcon Italy 2025 - Building Inclusive Jetpack Compose Apps ✓</div>
                           <div>• Mentor Me Collective - Code & Hydrate Workshop ✓</div>

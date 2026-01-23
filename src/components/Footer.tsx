@@ -72,7 +72,6 @@ export default function Footer() {
             <ul className="space-y-2 text-sm text-gray-400">
               <li>SeleniumConf & AppiumConf 2026</li>
               <li>Devoxx Greece 2026</li>
-              <li>GDC 2026</li>
               <li>APIDays Paris 2025 (recorded)</li>
               <li>Droidcon Italy 2025</li>
             </ul>
